@@ -124,5 +124,5 @@ pipe.t5_encoder.to(pipe.device, dtype=pipe.unet.dtype)
 pipe.t5_projection.to(pipe.device, dtype=pipe.unet.dtype)
 
 
-images = pipe("a misty Tokyo alley at night").images
+images = pipe("sad girl in snow").images
 images[0].save("test.png")
