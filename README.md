@@ -17,10 +17,12 @@ Run with
 # Improvements
 
 Prior versions did a full conversion of the base SDXL model on the fly, before then trying to do something with it.
-THS version draws from a mostly converted model, living at
+
+In contrast, THIS version draws from a mostly converted model, living at
 https://huggingface.co/opendiffusionai/stablediffusionxl_t5
 
 But... that is still a raw conversion. 
 Now that the rendering code is somewhat clean, 
 I plan to try finetuning it to create something actually comprehensible.
 
+Once I can acquire updated training software that recognizes the model, that is.
