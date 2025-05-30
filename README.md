@@ -5,14 +5,22 @@ I have heard a few experiments in adding adaptors, or translators, for T5 text e
 
 So.. I'm going to experiment with doing that.
 
-Right now there is only POC.py
+# How to use
+
+Grab POC.py
 Run with
 
     pip install torch diffusers transformers accelerate sentencepiece
     python POC.py
 
-This will dynamically assemble a varient of SDXL, that replaces the text input CLIPs, with T5.
-And then run a silly prompt. Which generates effectively garbage output.
 
-Eventually I plan to try finetuning it to create something actually comprehensible.
+# Improvements
+
+Prior versions did a full conversion of the base SDXL model on the fly, before then trying to do something with it.
+THS version draws from a mostly converted model, living at
+https://huggingface.co/opendiffusionai/stablediffusionxl_t5
+
+But... that is still a raw conversion. 
+Now that the rendering code is somewhat clean, 
+I plan to try finetuning it to create something actually comprehensible.
 
